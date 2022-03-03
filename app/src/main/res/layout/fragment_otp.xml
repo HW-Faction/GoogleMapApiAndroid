@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    tools:context=".fragments.OtpFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:id="@+id/otp_desc_tv"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:inputType="number"
+        android:maxLength="6"
+        android:layout_marginTop="25dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:id="@+id/otp_et"
+        android:background="@drawable/edittext_background"
+        android:layout_width="200dp"
+        android:layout_height="40dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@drawable/edittext_background"
+            android:layout_marginTop="25dp"
+            android:id="@+id/login_btn"
+            android:textSize="15sp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:layout_centerInParent="true"
+            android:layout_width="250dp"
+            android:layout_height="40dp" />
+
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="40dp"
+            android:visibility="invisible"
+            android:id="@+id/progress_circular"
+            android:layout_height="40dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

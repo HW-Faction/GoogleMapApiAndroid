@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/phone_no_fragment">
+
+    <fragment
+        android:id="@+id/phone_no_fragment"
+        android:name="map.api.assignment.fragments.PhoneNoFragment"
+        android:label="phone_no_fragment"
+        tools:layout="@layout/fragment_phone_no">
+
+        <action
+            android:id="@+id/action_from_phone_no_frag_to_otp_frag"
+            app:destination="@id/otp_fragment"
+            app:popUpTo="@id/phone_no_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/otp_fragment"
+        android:name="map.api.assignment.fragments.OtpFragment"
+        android:label="otp_fragment"
+        tools:layout="@layout/fragment_otp">
+
+        <argument
+            android:name="phone_number"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
